@@ -1,0 +1,22 @@
+<div class="offcanvas offcanvas-end"  tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h1 class="offcanvas-title" id="offcanvasRightLabel">Add Todos</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>Enter title and body</p>
+      <form [formGroup]="todoForm">
+        <mat-form-field appearance="outline" class="f-width">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="f-width">
+          <mat-label>Body</mat-label>
+          <textarea matInput formControlName="body"></textarea>
+        </mat-form-field>
+        <button mat-raised-button class="m-2" color="primary" (click)="addTodo()">Add Todo</button>
+        <button mat-raised-button color="warn" data-bs-dismiss="offcanvas">Cancel</button>
+      </form>
+    </div>
+  </div>
+  
